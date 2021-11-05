@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>CounterButton</title>
+            <script>
+            function increment(id){
+                var int = document.getElementById('b')
+                var b = document.getElementById('b').value
+                var c = parseInt(b)
+                c = c + 1;
+                int.value = c         
+            }
+            function decrement(id){
+                var int = document.getElementById('b')
+                var b = document.getElementById('b').value
+                var c = parseInt(b)
+                c = c - 1;
+                int.value = c         
+            }
+            </script>
+            <style>
+                body{
+                    display:flex;
+                    margin:160px;
+                    justify-content: center;
+                    background-color: rgb(247, 156, 45);
+                }
+                body:hover {
+                    background: linear-gradient(45deg,limegreen,pink);
+                }
+                #main{
+                    height:50vh;
+                    width:30vw;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgb(104, 234, 243);
+                    padding:10px;
+                    border-radius: 15px;
+                }
+                #main:hover {
+                    background-color: darkgoldenrod;
+                    
+                }
+               div:hover h1{
+                    color: rgb(226, 250, 7);
+                   
+                    border-radius: 15px;
+                }
+                h1::first-letter{
+                    font-size: 50px;
+                    color:yellowgreen;
+                    
+                }
+                button{
+                    height:80px;
+                    width:120px;
+                    margin:10px;
+                    border-radius: 10px;
+                    background-color: rgb(221, 13, 152);
+                    justify-content: center;
+                    font-size: large;
+                    border:none
+                }
+                button:hover {
+                   
+                   background-color:yellow;
+                   font-size: small;
+                   
+               }
+                input{
+                    height:180px;
+                    width:150px;
+                    text-align:center;
+                    border-radius: 10px;
+                    background-color: beige;
+                    padding:10px;
+                    font-size:large;
+                    border:none
+                }
+                input:hover{
+                    background-color: rgb(117, 73, 238);
+                    font-size:small;
+                    
+                }
+            </style>
+
+    </head>
+    <body>
+        <div id ="main">   
+        <h1 style ="background-color: red; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"><i>Counter Button</i></h1>
+            <input type="text" id="b" value="0"><br><br>
+            <button id='+' onClick="increment('+')">+</button><br>
+            <button id='-' onClick="decrement('-')">-</button>
+        </div>
+    </body>
+</html>
